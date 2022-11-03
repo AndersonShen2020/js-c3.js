@@ -1,0 +1,384 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 1.5;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.training-layout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+.training-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 920px;
+  padding: 60px 95px;
+  -webkit-box-shadow: 0px 3px 6px #00000029;
+          box-shadow: 0px 3px 6px #00000029;
+  border-radius: 12px;
+}
+
+.training-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 45%;
+}
+
+.training-img img {
+  max-width: 100%;
+  display: block;
+}
+
+.training-form {
+  width: 45%;
+}
+
+.training-form ul {
+  padding-top: 2rem;
+}
+
+.training-form ul li {
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #00807e;
+  font-weight: bold;
+}
+
+.training-form ul li input,
+.training-form ul li textarea,
+.training-form ul li select {
+  width: 70%;
+  background-color: #fafafa;
+  color: #818a91;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #00807e;
+  font-size: 1rem;
+  text-indent: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  min-height: 38px;
+}
+
+.training-form ul li textarea {
+  min-height: 111px;
+}
+
+.training-form ul li.form-btn {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.training-form ul li.form-btn button {
+  background-color: #00807e;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 40px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.training-form ul li.form-btn button:hover {
+  background-color: #004e4d;
+}
+
+.title {
+  color: #00807e;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-bottom: 4px;
+  border-bottom: 3px solid #00807e;
+}
+
+.title span {
+  margin-right: 6px;
+}
+
+@media (max-width: 768px) {
+  .training-panel {
+    padding: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border-radius: none;
+  }
+  .training-img {
+    width: 100%;
+  }
+  .training-img img:nth-child(2) {
+    display: none;
+  }
+  .training-form {
+    width: 100%;
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .training-layout {
+    padding: 2rem;
+  }
+  .training-form ul li {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  .training-form ul li input,
+  .training-form ul li textarea,
+  .training-form ul li select {
+    width: 100%;
+  }
+  .training-form ul li.form-btn {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.main-content {
+  line-height: 1.5;
+  padding-bottom: 5rem;
+  background-color: #f7f7f7;
+}
+
+.main-content .search-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 920px;
+  padding: 50px 0;
+  margin: 0 auto;
+}
+
+.main-content .search-area select {
+  color: #818a91;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #ced4da;
+  font-size: 1rem;
+  text-indent: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  min-height: 38px;
+  border-radius: 4px;
+  width: 16rem;
+  margin-right: 30px;
+}
+
+.main-content .search-area p {
+  color: #818a91;
+}
+
+.main-content .ticketCard-area {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+}
+
+.main-content .ticketCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: calc(1000px / 3);
+  background-color: #fff;
+  -webkit-box-shadow: 0px 3px 6px #00000029;
+          box-shadow: 0px 3px 6px #00000029;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  position: relative;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+}
+
+.main-content .ticketCard-img {
+  overflow: hidden;
+  height: 180px;
+}
+
+.main-content .ticketCard-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main-content .ticketCard-img img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.main-content .ticketCard-location, .main-content .ticketCard-rank {
+  position: absolute;
+  z-index: 10;
+}
+
+.main-content .ticketCard-location {
+  top: -12px;
+  padding: 0.75rem 20px;
+  font-size: 1.25rem;
+  background-color: #64c3bf;
+  color: #fff;
+  border-radius: 0 5px 5px 0px;
+}
+
+.main-content .ticketCard-rank {
+  top: 154px;
+  padding: 5px 8px;
+  background-color: #00807e;
+  color: #fff;
+  border-radius: 0 5px 5px 0px;
+}
+
+.main-content .ticketCard-content {
+  padding: 20px;
+  height: calc(100% - 180px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-content .ticketCard-content h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00807e;
+  border-bottom: 2px solid #00807e;
+  cursor: pointer;
+  padding-bottom: 0.5rem;
+}
+
+.main-content .ticketCard-content h3:hover {
+  color: #64c3bf;
+}
+
+.main-content .ticketCard-description {
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+
+.main-content .ticketCard-description > p {
+  color: #818a91;
+}
+
+.main-content .ticketCard-info {
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #00807e;
+  font-weight: bold;
+}
+
+.main-content .ticketCard-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-content .ticketCard-price span {
+  font-size: 2rem;
+}
+
+.main-content .cantFind-area {
+  margin-top: 70px;
+  text-align: center;
+}
+
+.main-content .cantFind-area h3 {
+  color: #00807e;
+  font-size: 2rem;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+
+.main-content .cantFind-area img {
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .main-content .cantFind-area img {
+    width: 100%;
+  }
+}
+
+.d-none {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */

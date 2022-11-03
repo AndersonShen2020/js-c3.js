@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+      integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <!-- 新增旅遊套票 -->
+    <section class="training-layout">
+      <section class="training-panel">
+        <div class="training-img">
+          <img
+            src="https://github.com/hexschool/2022-web-layout-training/blob/main/js_week5/main_img.png?raw=true"
+            alt=""
+          />
+          <img
+            src="https://github.com/hexschool/2022-web-layout-training/blob/main/js_week5/logo.png?raw=true"
+            alt=""
+          />
+        </div>
+        <form class="training-form">
+          <h1 class="title">
+            <span><i class="fas fa-plus-circle"></i></span>新增旅遊套票
+          </h1>
+          <ul>
+            <li>
+              <label for="ticketName">套票名稱</label>
+              <input
+                type="text"
+                id="ticketName"
+                name="ticketName"
+                placeholder="請填寫套票名稱"
+                required
+              />
+            </li>
+            <li>
+              <label for="ticketImgUrl">圖片網址</label>
+              <input
+                type="text"
+                id="ticketImgUrl"
+                name="ticketImgUrl"
+                placeholder="請填寫圖片網址"
+                required
+              />
+            </li>
+            <li>
+              <label for="ticketRegion">景點地區</label>
+              <select name="ticketRegion" id="ticketRegion" required>
+                <option value="" disabled selected hidden>請選擇景點地區</option>
+                <option value="台北">台北</option>
+                <option value="台中">台中</option>
+                <option value="高雄">高雄</option>
+              </select>
+            </li>
+            <li>
+              <label for="ticketPrice">套票金額</label>
+              <input
+                type="number"
+                id="ticketPrice"
+                name="ticketPrice"
+                placeholder="請填寫套票金額"
+                min="0"
+                required
+              />
+            </li>
+            <li>
+              <label for="ticketNum">套票組數</label>
+              <input
+                type="number"
+                id="ticketNum"
+                name="ticketNum"
+                placeholder="請填寫套票組數"
+                min="0"
+                required
+              />
+            </li>
+            <li>
+              <label for="ticketRate">套票星級</label>
+              <input
+                type="number"
+                id="ticketRate"
+                name="ticketRate"
+                placeholder="請填寫套票星級"
+                min="1"
+                max="10"
+                required
+              />
+            </li>
+            <li>
+              <label for="ticketDescription">套票描述</label>
+              <textarea
+                id="ticketDescription"
+                name="ticketDescription"
+                placeholder="請填寫套票描述 (限 100 字)"
+                maxlength="100"
+                required
+              ></textarea>
+            </li>
+            <li class="form-btn">
+              <!-- <button type="button" onclick="checkForm()">新增套票</button> -->
+              <button type="submit">新增套票</button>
+            </li>
+          </ul>
+        </form>
+      </section>
+    </section>
+    <section class="main-content">
+      <!-- 搜尋區 -->
+      <section class="search-area">
+        <select name="ticketRegion" id="searchTicketRegion">
+          <option value="地區搜尋" disabled selected hidden>地區搜尋</option>
+          <option value="">全部地區</option>
+          <option value="台北">台北</option>
+          <option value="台中">台中</option>
+          <option value="高雄">高雄</option>
+        </select>
+        <p>本次搜尋共 3 筆資料</p>
+      </section>
+      <!-- 套票卡片區 -->
+      <ul class="ticketCard-area">
+        <li class="ticketCard">
+          <div class="ticketCard-img">
+            <div class="ticketCard-location">高雄</div>
+            <a href="#">
+              <img
+                src="https://github.com/hexschool/2022-web-layout-training/blob/main/js_week5/travel_1.png?raw=true"
+                alt=""
+              />
+            </a>
+            <div class="ticketCard-rank">10</div>
+          </div>
+          <div class="ticketCard-content">
+            <h3 class="ticketCard-title">綠島自由行套裝行程</h3>
+            <div class="ticketCard-description">
+              <p>嚴選超高CP值綠島自由行套裝行程，多種綠島套裝組合。</p>
+              <div class="ticketCard-info">
+                <p class="ticketCard-num">
+                  <span><i class="fas fa-exclamation-circle"></i></span>
+                  剩下最後 <span> 87 </span> 組
+                </p>
+                <p class="ticketCard-price">TWD <span>$1400</span></p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="ticketCard">
+          <div class="ticketCard-img">
+            <div class="ticketCard-location">台北</div>
+            <a href="#">
+              <img
+                src="https://github.com/hexschool/2022-web-layout-training/blob/main/js_week5/travel_4.png?raw=true"
+                alt=""
+              />
+            </a>
+            <div class="ticketCard-rank">2</div>
+          </div>
+          <div class="ticketCard-content">
+            <h3 class="ticketCard-title">清境高空觀景步道</h3>
+            <div class="ticketCard-description">
+              <p>
+                清境農場青青草原數十公頃碧草，這些景觀豐沛了清境觀景步道的風格，也涵養它無可取代的特色。
+              </p>
+              <div class="ticketCard-info">
+                <p class="ticketCard-num">
+                  <span><i class="fas fa-exclamation-circle"></i></span>
+                  剩下最後 <span> 99 </span> 組
+                </p>
+                <p class="ticketCard-price">TWD <span>$240</span></p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="ticketCard">
+          <div class="ticketCard-img">
+            <div class="ticketCard-location">台中</div>
+            <a href="#">
+              <img
+                src="https://github.com/hexschool/2022-web-layout-training/blob/main/js_week5/travel_3.png?raw=true"
+                alt=""
+              />
+            </a>
+            <div class="ticketCard-rank">7</div>
+          </div>
+          <div class="ticketCard-content">
+            <h3 class="ticketCard-title">山林悠遊套票</h3>
+            <div class="ticketCard-description">
+              <p>山林悠遊套票，結合南投清境高空步道、雙龍瀑布七彩吊橋、瑞龍瀑布園區之熱門景點。</p>
+              <div class="ticketCard-info">
+                <p class="ticketCard-num">
+                  <span><i class="fas fa-exclamation-circle"></i></span>
+                  剩下最後 <span> 20 </span> 組
+                </p>
+                <p class="ticketCard-price">TWD <span>$1765</span></p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="ticketCard">
+          <div class="ticketCard-img">
+            <div class="ticketCard-location">高雄</div>
+            <a href="#">
+              <img
+                src="https://github.com/hexschool/2022-web-layout-training/blob/main/js_week5/travel_1.png?raw=true"
+                alt=""
+              />
+            </a>
+            <div class="ticketCard-rank">10</div>
+          </div>
+          <div class="ticketCard-content">
+            <h3 class="ticketCard-title">綠島自由行套裝行程</h3>
+            <div class="ticketCard-description">
+              <p>嚴選超高CP值綠島自由行套裝行程，多種綠島套裝組合。</p>
+              <div class="ticketCard-info">
+                <p class="ticketCard-num">
+                  <span><i class="fas fa-exclamation-circle"></i></span>
+                  剩下最後 <span> 87 </span> 組
+                </p>
+                <p class="ticketCard-price">TWD <span>$1400</span></p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="ticketCard">
+          <div class="ticketCard-img">
+            <div class="ticketCard-location">台北</div>
+            <a href="#">
+              <img
+                src="https://github.com/hexschool/2022-web-layout-training/blob/main/js_week5/travel_4.png?raw=true"
+                alt=""
+              />
+            </a>
+            <div class="ticketCard-rank">2</div>
+          </div>
+          <div class="ticketCard-content">
+            <h3 class="ticketCard-title">清境高空觀景步道</h3>
+            <div class="ticketCard-description">
+              <p>
+                清境農場青青草原數十公頃碧草，這些景觀豐沛了清境觀景步道的風格，也涵養它無可取代的特色。
+              </p>
+              <div class="ticketCard-info">
+                <p class="ticketCard-num">
+                  <span><i class="fas fa-exclamation-circle"></i></span>
+                  剩下最後 <span> 99 </span> 組
+                </p>
+                <p class="ticketCard-price">TWD <span>$240</span></p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="ticketCard">
+          <div class="ticketCard-img">
+            <div class="ticketCard-location">台中</div>
+            <a href="#">
+              <img
+                src="https://github.com/hexschool/2022-web-layout-training/blob/main/js_week5/travel_3.png?raw=true"
+                alt=""
+              />
+            </a>
+            <div class="ticketCard-rank">7</div>
+          </div>
+          <div class="ticketCard-content">
+            <h3 class="ticketCard-title">山林悠遊套票</h3>
+            <div class="ticketCard-description">
+              <p>山林悠遊套票，結合南投清境高空步道、雙龍瀑布七彩吊橋、瑞龍瀑布園區之熱門景點。</p>
+              <div class="ticketCard-info">
+                <p class="ticketCard-num">
+                  <span><i class="fas fa-exclamation-circle"></i></span>
+                  剩下最後 <span> 20 </span> 組
+                </p>
+                <p class="ticketCard-price">TWD <span>$1765</span></p>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <!-- 查無關鍵字區 -->
+      <div class="cantFind-area d-none">
+        <h3>查無此關鍵字資料</h3>
+        <img
+          src="https://github.com/hexschool/2022-web-layout-training/blob/main/js_week5/no_found.png?raw=true"
+          alt=""
+        />
+      </div>
+    </section>
+    <script src="all.js"></script>
+  </body>
+</html>
