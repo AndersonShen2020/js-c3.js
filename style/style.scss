@@ -150,6 +150,16 @@ $main-color: #00807e;
     max-width: 920px;
     padding: 50px 0;
     margin: 0 auto;
+    @media (max-width: 768px) {
+      & {
+        justify-content: center;
+      }
+    }
+    @media (max-width: 576px) {
+      & {
+        flex-direction: column;
+      }
+    }
     select {
       color: #818a91;
       outline: none;
@@ -163,9 +173,20 @@ $main-color: #00807e;
       border-radius: 4px;
       width: 16rem;
       margin-right: 30px;
+      @media (max-width: 576px) {
+        & {
+          width: 90%;
+          margin: 2rem auto 0 auto;
+        }
+      }
     }
     p {
       color: #818a91;
+      @media (max-width: 576px) {
+        & {
+          margin-top: 2rem;
+        }
+      }
     }
   }
   .ticketCard {
@@ -177,6 +198,11 @@ $main-color: #00807e;
       // align-items: center;
       flex-wrap: wrap;
       gap: 30px;
+      @media (max-width: 768px) {
+        & {
+          justify-content: center;
+        }
+      }
     }
     & {
       display: flex;
@@ -188,6 +214,11 @@ $main-color: #00807e;
       border-radius: 4px;
       position: relative;
       align-self: stretch;
+      @media (max-width: 576px) {
+        & {
+          width: 90%;
+        }
+      }
     }
     &-img {
       overflow: hidden;
