@@ -40,6 +40,7 @@ const areaData = ["台北", "台中", "高雄"];
 const trainingForm = document.querySelector(".training-form"); // 表單
 const ticketCardArea = document.querySelector(".ticketCard-area"); // 套票卡片區
 const searchTicketRegion = document.querySelector("#searchTicketRegion"); // 套票卡片區
+const searchLength = document.querySelector("#searchLength"); // 查詢結果數量
 
 trainingForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -106,6 +107,7 @@ function renderTicketCardArea(ticketList) {
         `;
   });
   ticketCardArea.innerHTML = totalTicketCardStr;
+  searchLength.innerHTML = `本次搜尋共 ${ticketList.length} 筆資料`
 }
 
 function init() {
