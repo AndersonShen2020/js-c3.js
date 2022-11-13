@@ -36,7 +36,7 @@
 // ];
 
 const apiUrl = `https://raw.githubusercontent.com/hexschool/js-training/main/travelApi.json`;
-let productData = undefined;
+let productData = [];
 
 const areaData = ["台北", "台中", "高雄"];
 
@@ -135,9 +135,41 @@ function renderTicketCardArea(ticketList) {
   searchLength.innerHTML = `本次搜尋共 ${ticketList.length} 筆資料`
 }
 
+// C3
+function c3Init() { 
+  c3.generate({
+    bindto: '#chart', // HTML 元素綁定
+    data: {
+      columns: [
+        ['高雄', 2],
+        ['台中', 1],
+        ['台北',1]
+      ], // 資料存放
+      type:"donut", // 圖表種類
+      colors:{
+        "高雄":"#E68618",
+        "台中":"#5151D3",
+        "台北":"#26BFC7"
+      }
+    },
+    size: {
+      width: 160,
+      height: 160
+    },
+    donut: {
+      title: "套票地區比重",
+      width: 8,
+      label: {
+        show: false
+      }
+    }
+});
+}
+
 async function init() {
   await getData();
   filterTicketCardData();
+  c3Init();
 }
 
 init();

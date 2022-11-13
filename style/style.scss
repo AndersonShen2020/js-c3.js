@@ -188,6 +188,19 @@ $main-color: #00807e;
         }
       }
     }
+    #chart {
+      margin-left: auto;
+      @media (max-width: 768px) {
+        & {
+          margin-left: 0;
+        }
+      }
+      @media (max-width: 576px) {
+        & {
+          margin: 0 auto;
+        }
+      }
+    }
   }
   .ticketCard {
     &-area {
